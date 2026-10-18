@@ -5,7 +5,7 @@ import pandas as pd
 import streamlit as st
 
 CONVENIOS = ["Particular", "Unimed", "Bradesco Saúde", "SulAmérica", "Outro"]
-COLUNAS = ["timestamp", "nome", "idade", "convenio", "prioridade", "motivo"]
+COLUNAS = ["hora", "nome", "idade", "convenio", "prioridade", "motivo"]
 ARQUIVO_CSV = Path(__file__).resolve().parent / "pacientes.csv"
 
 
@@ -69,7 +69,7 @@ if enviado:
             st.error(str(erro))
         else:
             nova_linha = {
-                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                "hora": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                 "nome": nome,
                 "idade": idade,
                 "convenio": convenio,
