@@ -1,0 +1,3 @@
+gradio>=4.44,<7
+streamlit>=1.40,<2
+pandas>=2.2,<4
